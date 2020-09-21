@@ -102,8 +102,7 @@ jobs:
         run: |
           cd openwrt
           let make_process=$(nproc)+1
-          make -j1 V=s
-#          make -j${make_process} V=s || make -j${make_process} V=s
+          make -j${make_process} V=s || make -j${make_process} V=s
 
       - name: Organize files
         id: organize

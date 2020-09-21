@@ -83,8 +83,8 @@ svn co https://github.com/openwrt/packages/trunk/net/curl package/network/utils/
 #rm -rf ./feeds/packages/lang/node-serialport-bindings
 #svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-serialport-bindings feeds/packages/lang/node-serialport-bindings
 #update GCC
-#rm -rf ./feeds/packages/devel/gcc
-#svn co https://github.com/openwrt/packages/trunk/devel/gcc feeds/packages/devel/gcc
+rm -rf ./feeds/packages/devel/gcc
+svn co https://github.com/openwrt/packages/trunk/devel/gcc feeds/packages/devel/gcc
 #update Golang
 rm -rf ./feeds/packages/lang/golang
 svn co https://github.com/openwrt/packages/trunk/lang/golang feeds/packages/lang/golang
