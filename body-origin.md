@@ -1,4 +1,5 @@
 #### OpenWrt原生源码+Simons的patch编译，使用前请仔细阅读如下说明：
+***这是自用固件，仅有英文界面**
 ***如果厌烦TF上squashfs更新系统可能无法真正清除upper layer，请直接使用ext4的版本**
 1. slim版是OpenWrt当日最新源码编译，内核5.4。18.06是取CTCGFW 18.06-kernel5.4分支编译。
 2. 内含ssrp、frpc/frps、gost、ddns、ttyd、zerotier、京东签到、OpenConnect VPN、gost等常用功能，部分组件可能会随时增减，cli下有stress\dig\ss\cfdisk\iftop\ifstat\iperf3\wget\nmap等工具。
