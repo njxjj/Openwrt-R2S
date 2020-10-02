@@ -63,5 +63,7 @@ opkg flag hold dnsmasq-full
 #uci set dhcp.lan.ra=disabled
 #uci set dhcp.lan.dhcpv6=disabled
 #uci commit 
+uci set ttyd.@ttyd[0].command='/bin/login'
+uci commit ttyd
 
 exit 0
