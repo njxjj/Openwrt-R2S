@@ -125,7 +125,7 @@ jobs:
         
       - name: Upload artifact
         uses: actions/upload-artifact@main
-        if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
+#        if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
         with:
           name: OpenWrt_R2S_origin_firmware
           path: ${{ env.FIRMWARE }}
@@ -133,13 +133,13 @@ jobs:
       - name: Create release
         id: create_release
         uses: ncipollo/release-action@v1.6.1
-        if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+#        if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         with:
           name: OpenWrt-R2S固件
           allowUpdates: true
           tag: OpenWrt
           commit: master
           replacesArtifacts: true
-          token: ${{ secrets.RELEASES_TOKEN }}
+          token: ${{ secrets.repo }}
           bodyFile: "body-origin.md"
           artifacts: ${{ env.FIRMWARE }}/*.zip,${{ env.FIRMWARE }}/slim*
